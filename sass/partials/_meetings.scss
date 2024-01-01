@@ -1,0 +1,97 @@
+.meetings {
+  max-width: 115.8rem;
+  margin: 0 auto;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 18.4rem;
+
+  .number {
+    width: 5.6rem;
+    height: 5.6rem;
+    border: 0.1rem solid rgba(135, 135, 157, 0.25);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 1.6rem;
+    margin-bottom: 6.4rem;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 0.1rem;
+      height: 8.4rem;
+      background-color: $gray;
+      opacity: 0.25;
+      position: absolute;
+      left: 50%;
+      top: -8.4rem;
+      transform: translateX(-50%);
+    }
+  }
+
+  .images {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 8rem;
+
+    @include responsive(m) {
+      gap: 1.1rem;
+      margin-bottom: 4.8rem;
+    }
+
+    @include responsive(s) {
+      gap: 1.1rem;
+      margin-bottom: 4.8rem;
+    }
+
+    @include responsive(xs) {
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 6.4rem;
+    }
+
+    li {
+      border-radius: 0.8rem;
+      overflow: hidden;
+
+      img {
+        transition: 0.3s ease;
+        &:hover {
+          transform: scale(1.15);
+        }
+      }
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    span {
+      margin-bottom: 1.6rem;
+
+      @include responsive(xs) {
+        margin-bottom: 2.4rem;
+      }
+    }
+
+    h2 {
+      max-width: 44.5rem;
+      text-align: center;
+      margin-bottom: 3.2rem;
+    }
+
+    p {
+      max-width: 54rem;
+      text-align: center;
+    }
+  }
+}

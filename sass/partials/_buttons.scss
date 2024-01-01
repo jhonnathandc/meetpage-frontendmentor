@@ -1,0 +1,41 @@
+.btn-g {
+  font-family: "Red Hat Display";
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  font-weight: 900;
+  color: #ffffff;
+
+  background-color: #4d96a9;
+  padding: 1.6rem 3rem;
+  border-radius: 2.9rem;
+  transition: 0.3s ease;
+
+  &:hover {
+    background-color: #71c0d4;
+  }
+
+  span {
+    color: #8fe3f9;
+  }
+}
+
+.btn-p {
+  font-family: "Red Hat Display";
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  font-weight: 900;
+  color: #ffffff;
+
+  background-color: #855fb1;
+  padding: 1.6rem 3rem;
+  border-radius: 2.9rem;
+  transition: 0.3s ease;
+
+  &:hover {
+    background-color: #b18bdd;
+  }
+
+  span {
+    color: #d9b8ff;
+  }
+}

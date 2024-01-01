@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap");
+
+@mixin type-1($size, $device) {
+  font-family: "Red Hat Display";
+
+  // H1
+  @if ($size == h1) and ($device == desktop) {
+    font-size: 6.4rem;
+    line-height: 6.4rem;
+    font-weight: 900;
+  } @else if ($size == h1) and ($device == tablet) {
+    font-size: 4.8rem;
+    line-height: 4.8rem;
+    font-weight: 900;
+  } @else if ($size == h1) and ($device == mobile) {
+    font-size: 4rem;
+    line-height: 4.4rem;
+    font-weight: 900;
+  }
+
+  // H2
+  @else if ($size == h2) and ($device == desktop) {
+    font-size: 4rem;
+    line-height: 4.4rem;
+    font-weight: 900;
+  } @else if ($size == h2) and ($device == tablet) {
+    font-size: 4rem;
+    line-height: 4.4rem;
+    font-weight: 900;
+  } @else if ($size == h2) and ($device == mobile) {
+    font-size: 3.2rem;
+    line-height: 3.6rem;
+    font-weight: 900;
+  }
+
+  // B1
+  @else if ($size == b1) and ($device == desktop) {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    font-weight: 500;
+  } @else if ($size == b1) and ($device == tablet) {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    font-weight: 500;
+  } @else if ($size == b1) and ($device == mobile) {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    font-weight: 500;
+  }
+
+  // B2
+  @else if ($size == b2) and ($device == desktop) {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    font-weight: 500;
+  } @else if ($size == b2) and ($device == tablet) {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    font-weight: 500;
+  } @else if ($size == b2) and ($device == mobile) {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    font-weight: 500;
+  }
+
+  // B3
+  @else if ($size == b3) and ($device == desktop) {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    font-weight: 900;
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+  } @else if ($size == b3) and ($device == tablet) {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    font-weight: 900;
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+  } @else if ($size == b3) and ($device == mobile) {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    font-weight: 900;
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+  }
+}
+
+.h1 {
+  @include type-1(h1, desktop);
+  @include responsive(m) {
+    @include type-1(h1, tablet);
+  }
+  @include responsive(s) {
+    @include type-1(h1, tablet);
+  }
+  @include responsive(xs) {
+    @include type-1(h1, mobile);
+  }
+}
+
+.h2 {
+  @include type-1(h2, desktop);
+  @include responsive(m) {
+    @include type-1(h2, tablet);
+  }
+  @include responsive(s) {
+    @include type-1(h2, tablet);
+  }
+  @include responsive(xs) {
+    @include type-1(h2, mobile);
+  }
+}
+
+.b1 {
+  @include type-1(b1, desktop);
+  @include responsive(m) {
+    @include type-1(b1, tablet);
+  }
+  @include responsive(s) {
+    @include type-1(b1, tablet);
+  }
+  @include responsive(xs) {
+    @include type-1(b1, mobile);
+  }
+}
+
+.b2 {
+  @include type-1(b2, desktop);
+  @include responsive(m) {
+    @include type-1(b2, tablet);
+  }
+  @include responsive(s) {
+    @include type-1(b2, tablet);
+  }
+  @include responsive(xs) {
+    @include type-1(b2, mobile);
+  }
+}
+
+.b3 {
+  @include type-1(b3, desktop);
+  @include responsive(m) {
+    @include type-1(b3, tablet);
+  }
+  @include responsive(s) {
+    @include type-1(b3, tablet);
+  }
+  @include responsive(xs) {
+    @include type-1(b3, mobile);
+  }
+}

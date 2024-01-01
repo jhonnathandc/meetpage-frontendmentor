@@ -1,0 +1,121 @@
+.footer {
+  width: 100%;
+  background-image: url("../../assets/desktop/image-footer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 11.6rem;
+  padding-bottom: 10.4rem;
+  position: relative;
+
+  @include responsive(m) {
+    background-image: url("../../assets/tablet/image-footer.jpg");
+    padding-top: 9.2rem;
+    padding-bottom: 6.6rem;
+  }
+
+  @include responsive(s) {
+    background-image: url("../../assets/tablet/image-footer.jpg");
+    padding-top: 9.2rem;
+    padding-bottom: 6.6rem;
+  }
+
+  @include responsive(xs) {
+    background-image: url("../../assets/mobile/image-footer.jpg");
+    padding-top: 9.2rem;
+    padding-bottom: 6.6rem;
+  }
+
+  .number {
+    width: 5.6rem;
+    height: 5.6rem;
+    border: 0.1rem solid rgba(135, 135, 157, 0.25);
+    background-color: $white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    margin-bottom: 6.4rem;
+    position: absolute;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    top: 0;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 0.1rem;
+      height: 8.4rem;
+      background-color: $gray;
+      opacity: 0.25;
+      position: absolute;
+      left: 50%;
+      top: -8.4rem;
+      transform: translateX(-50%);
+    }
+  }
+
+  .footer-container {
+    max-width: 115.8rem;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    @include responsive(m) {
+      flex-direction: column;
+    }
+
+    @include responsive(s) {
+      flex-direction: column;
+    }
+
+    @include responsive(xs) {
+      flex-direction: column;
+    }
+
+    h2 {
+      max-width: 35rem;
+
+      @include responsive(m) {
+        text-align: center;
+        margin-bottom: 3.2rem;
+      }
+
+      @include responsive(s) {
+        text-align: center;
+        margin-bottom: 3.2rem;
+      }
+
+      @include responsive(xs) {
+        text-align: center;
+        margin-bottom: 3.2rem;
+      }
+    }
+
+    p {
+      max-width: 35rem;
+
+      @include responsive(m) {
+        max-width: 57.3rem;
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+
+      @include responsive(s) {
+        max-width: 57.3rem;
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+
+      @include responsive(xs) {
+        max-width: 57.3rem;
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+    }
+  }
+}
